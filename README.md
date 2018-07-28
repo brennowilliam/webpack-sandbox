@@ -1,9 +1,10 @@
 # Webpack Sandbox
 
 ## NPM Scripts
-In 'package.json', we can commands under the script property that allow us to build complex commands to run.
-Once is saved in there, we can just run 'npm run <nameOfScript>'
+To add scripts to our project, we can edit ```package.json``` under the ```scripts``` property to build complex commands.
+Once is saved in there, we can run ```npm run <nameOfScript>```.
 
+```
 Ex:
 
 ```javascript
@@ -13,10 +14,16 @@ scripts: {
   "dev": "npm run webpack -- --mode development",
   "prod": "npm run webpack -- --mode production"
 }
+...
 ```
-To run, I can do: npm run webpack or npm run dev or npm run prod
+In order to run these scripts we can do the following:
+```
+npm run webpack
+npm run dev
+npm run prod
+```
 
-Where does the scripts comes from?
-Webpack builds a directory called .bin where it hoits the scripts to the current scope, allowing us to use them.
+### How are we able to run executables such as webpack in the scripts?
+Webpack builds a directory called ```.bin``` where they hoisted to be available for us to use them.
 
 
